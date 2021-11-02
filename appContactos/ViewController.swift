@@ -164,27 +164,33 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
         let celda = tablaContactos.dequeueReusableCell(withIdentifier: "celda", for:indexPath) as! CeldaPersonalizada
         
         //comprobar el filtrado
-        var contact: Contacto
+        var contacto: Contacto
           if isFiltering {
-            contact = filtrarContacto[indexPath.row]
+            contacto = filtrarContacto[indexPath.row]
           } else {
-            contact = contactos[indexPath.row]
+            contacto  = contactos[indexPath.row]
           }
         
-        celda.lblNombreContacto.text = contactos[indexPath.row].nombre
-        celda.lblNumeroContacto.text = String(contactos[indexPath.row].telefono)
-        celda.lblDireccion.text = contactos[indexPath.row].direccion
-        celda.imagenContacto.image = UIImage(data: (contactos[indexPath.row].imagenPerfil ?? imagenPerson?.pngData())!)
+        celda.lblNombreContacto.text = contacto.nombre
+        celda.lblNumeroContacto.text = String(contacto.telefono)
+        celda.lblDireccion.text = contacto.direccion
+        celda.imagenContacto.image = UIImage(data: (contacto.imagenPerfil ?? imagenPerson?.pngData())!)
         return celda
     }
     
     //SELECCIONAR UN ELEMENTO
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var contacto: Contacto
+          if isFiltering {
+            contacto = filtrarContacto[indexPath.row]
+          } else {
+            contacto  = contactos[indexPath.row]
+          }
         
-        obtenerNombre = contactos[indexPath.row].nombre
-        obtenerNumero = String(contactos[indexPath.row].telefono)
-        obtenerDireccion = contactos[indexPath.row].direccion
-        obtenerImagen = UIImage(data: (contactos[indexPath.row].imagenPerfil ?? imagenPerson?.pngData())!)
+        obtenerNombre = contacto.nombre
+        obtenerNumero = String(contacto.telefono)
+        obtenerDireccion = contacto.direccion
+        obtenerImagen = UIImage(data: (contacto.imagenPerfil ?? imagenPerson?.pngData())!)
         obtenerIndex = indexPath.row
         performSegue(withIdentifier: "segueEditarContacto", sender: nil)
     }
