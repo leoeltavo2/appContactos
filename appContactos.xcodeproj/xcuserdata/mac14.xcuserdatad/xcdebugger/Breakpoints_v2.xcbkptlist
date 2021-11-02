@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E2B49682-82E9-4F29-B107-6FF59EF63C5B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20E5C3A2-967B-4589-9F14-D053ED1A3FC0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appContactos/CeldaPersonalizada.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "CeldaPersonalizada"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "20E5C3A2-967B-4589-9F14-D053ED1A3FC0 - 1f9783299d0e5cf9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appContactos.CeldaPersonalizada.lblNumeroContacto.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "appContactos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac14/Desktop/appContactos/appContactos/CeldaPersonalizada.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "20E5C3A2-967B-4589-9F14-D053ED1A3FC0 - 40fc90c577e1f8ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appContactos.CeldaPersonalizada.lblNumeroContacto.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "appContactos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac14/Desktop/appContactos/appContactos/CeldaPersonalizada.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "20E5C3A2-967B-4589-9F14-D053ED1A3FC0 - 52a36cdce8d87b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appContactos.CeldaPersonalizada.lblNumeroContacto.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "appContactos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac14/Desktop/appContactos/appContactos/CeldaPersonalizada.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "20E5C3A2-967B-4589-9F14-D053ED1A3FC0 - fa01e1b07f264b71"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appContactos.CeldaPersonalizada.lblNumeroContacto.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "appContactos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac14/Desktop/appContactos/appContactos/CeldaPersonalizada.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "20E5C3A2-967B-4589-9F14-D053ED1A3FC0 - 25516bcf85605c16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appContactos.CeldaPersonalizada.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; appContactos.CeldaPersonalizada"
+                  moduleName = "appContactos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac14/Desktop/appContactos/appContactos/CeldaPersonalizada.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "20E5C3A2-967B-4589-9F14-D053ED1A3FC0 - 4b9e8170c363b4b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "appContactos.CeldaPersonalizada.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;appContactos.CeldaPersonalizada&gt;"
+                  moduleName = "appContactos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac14/Desktop/appContactos/appContactos/CeldaPersonalizada.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "367">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

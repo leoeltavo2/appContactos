@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="KGk-i7-Jjw" customClass="CeldaPersonalizada" customModule="appContactos" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="483" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="483" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9As-FI-Gvd">
+                        <rect key="frame" x="0.0" y="0.0" width="483" height="112"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nbb-Wu-VQS">
+                                <rect key="frame" x="20" y="20" width="443" height="72"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xOh-AX-Ijg">
+                                        <rect key="frame" x="0.0" y="2.5" width="70" height="67.5"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="GtW-DV-7k0"/>
+                                            <constraint firstAttribute="width" constant="70" id="okZ-6E-Z4w"/>
+                                        </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Kih-hc-ZyO" userLabel="Sv lbl">
+                                        <rect key="frame" x="90" y="10" width="180" height="52"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NombreContacto" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWR-gx-dxc">
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nbC-7v-2td" userLabel="SV Numero">
+                                                <rect key="frame" x="0.0" y="31.5" width="149.5" height="20.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candybarphone" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cFi-9D-FEk">
+                                                        <rect key="frame" x="0.0" y="0.5" width="14.5" height="19.5"/>
+                                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumeroContacto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf9-fx-xDT">
+                                                        <rect key="frame" x="18.5" y="0.0" width="131" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="GOO-7T-Ucv"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ydt-v9-xJ9" userLabel="SV direccion">
+                                        <rect key="frame" x="340.5" y="13.5" width="102.5" height="45.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="building.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="991-rY-BtM">
+                                                <rect key="frame" x="39" y="0.0" width="24" height="20"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direccion" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlN-lp-3GS">
+                                                <rect key="frame" x="15" y="25" width="72" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ydt-v9-xJ9" firstAttribute="leading" secondItem="Kih-hc-ZyO" secondAttribute="trailing" constant="1" id="Sua-0i-wZ5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nbb-Wu-VQS" firstAttribute="leading" secondItem="9As-FI-Gvd" secondAttribute="leading" constant="20" id="Tdv-PD-ccH"/>
+                            <constraint firstItem="nbb-Wu-VQS" firstAttribute="top" secondItem="9As-FI-Gvd" secondAttribute="top" constant="20" id="ioZ-56-1as"/>
+                            <constraint firstAttribute="bottom" secondItem="nbb-Wu-VQS" secondAttribute="bottom" constant="20" id="moK-bH-5dt"/>
+                            <constraint firstAttribute="trailing" secondItem="nbb-Wu-VQS" secondAttribute="trailing" constant="20" id="rsl-j3-OHM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="9As-FI-Gvd" secondAttribute="bottom" id="D8K-gN-LOk"/>
+                    <constraint firstAttribute="trailing" secondItem="9As-FI-Gvd" secondAttribute="trailing" id="QJk-7E-k5B"/>
+                    <constraint firstItem="9As-FI-Gvd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YS1-e3-pub"/>
+                    <constraint firstItem="9As-FI-Gvd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kSj-R2-HiD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imagenContacto" destination="xOh-AX-Ijg" id="P9a-nS-uKR"/>
+                <outlet property="lblDireccion" destination="OlN-lp-3GS" id="Xyu-0B-X4O"/>
+                <outlet property="lblNombreContacto" destination="QWR-gx-dxc" id="BYX-MW-hyf"/>
+                <outlet property="lblNumeroContacto" destination="hf9-fx-xDT" id="TwS-9I-BjK"/>
+            </connections>
+            <point key="canvasLocation" x="258.69565217391306" y="140.625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="building.2" catalog="system" width="128" height="106"/>
+        <image name="candybarphone" catalog="system" width="97" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
