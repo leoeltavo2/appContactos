@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var obtenerNumero: String?
     var obtenerDireccion: String?
     var obtenerImagen: UIImage?
+    let imagenPerson = UIImage(systemName: "person.fill")
 
     @IBOutlet weak var tablaContactos: UITableView!
     
@@ -24,6 +25,19 @@ class ViewController: UIViewController {
     //MARK: - Arreglo de contactos
     var contactos = [Contacto]()
     
+    //Buscador
+    let controladorBusqueda = UISearchController(searchResultsController: nil)
+    var filtrarContacto = [Contacto]()
+    var isSearchBarEmpty: Bool {
+        guard let text = controladorBusqueda.searchBar.text else {return false}
+        return text.isEmpty
+    }
+    var isFiltering: Bool {
+      return controladorBusqueda.isActive && !isSearchBarEmpty
+    }
+
+    
+    //MARK: - VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +47,15 @@ class ViewController: UIViewController {
         
         tablaContactos.delegate = self
         tablaContactos.dataSource = self
+        
+        //Buscador
+        controladorBusqueda.searchResultsUpdater = self
+        navigationItem.searchController = controladorBusqueda
+        controladorBusqueda.obscuresBackgroundDuringPresentation = false
+        controladorBusqueda.searchBar.placeholder = "Buscar contacto"
+        navigationItem.searchController = controladorBusqueda
+        definesPresentationContext = true
+       
         
     }
 
@@ -118,6 +141,10 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //comprobar si esta filtrando
+        if isFiltering {
+           return filtrarContacto.count
+         }
         return contactos.count
     }
     
@@ -135,10 +162,19 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tablaContactos.dequeueReusableCell(withIdentifier: "celda", for:indexPath) as! CeldaPersonalizada
+        
+        //comprobar el filtrado
+        var contact: Contacto
+          if isFiltering {
+            contact = filtrarContacto[indexPath.row]
+          } else {
+            contact = contactos[indexPath.row]
+          }
+        
         celda.lblNombreContacto.text = contactos[indexPath.row].nombre
         celda.lblNumeroContacto.text = String(contactos[indexPath.row].telefono)
         celda.lblDireccion.text = contactos[indexPath.row].direccion
-        celda.imagenContacto.image = UIImage(data: contactos[indexPath.row].imagenPerfil!)
+        celda.imagenContacto.image = UIImage(data: (contactos[indexPath.row].imagenPerfil ?? imagenPerson?.pngData())!)
         return celda
     }
     
@@ -148,7 +184,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
         obtenerNombre = contactos[indexPath.row].nombre
         obtenerNumero = String(contactos[indexPath.row].telefono)
         obtenerDireccion = contactos[indexPath.row].direccion
-        obtenerImagen = UIImage(data: contactos[indexPath.row].imagenPerfil!)
+        obtenerImagen = UIImage(data: (contactos[indexPath.row].imagenPerfil ?? imagenPerson?.pngData())!)
         obtenerIndex = indexPath.row
         performSegue(withIdentifier: "segueEditarContacto", sender: nil)
     }
@@ -166,4 +202,21 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
         }
     }
     
+}
+
+//MARK: - buscador
+extension ViewController: UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filtrarContacto = contactos.filter( {(contact: Contacto) -> Bool in
+            return (contact.nombre?.lowercased().contains(searchText.lowercased()))!
+        })
+      
+      tablaContactos.reloadData()
+    }
+
 }

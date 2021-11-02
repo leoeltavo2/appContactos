@@ -57,7 +57,6 @@ class EditarContactoViewController: UIViewController, UINavigationControllerDele
     
     //MARK: - metodo del clickImagen poniendo @objc por ser parte de ello
     @objc func clickImagen(gestura: UITapGestureRecognizer){
-        print("click")
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
